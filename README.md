@@ -12,4 +12,5 @@ Testing is an important part of the development process and a standard of develo
 - TBA
 
 ## TODO's:
-- TBA
+- ~~Read through all comments and review code.~~
+- Write out the suite and specs. (*)
