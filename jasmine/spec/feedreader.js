@@ -81,7 +81,15 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+        it('should be able to ensure menu visibility when clicking menu icon.', function() {
+            let icon = document.querySelector('.menu-icon-link');
 
+            icon.click();
+            expect(menu.classList.contains('menu-hidden')).not.toBe(true);
+
+            icon.click();
+            expect(menu.classList.contains('menu-hidden')).toBe(true);
+        })
     })
 
     /* TODO: Write a new test suite named "Initial Entries" */
