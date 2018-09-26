@@ -106,7 +106,7 @@ $(function() {
             let feed = document.querySelector('.feed').children.length;
 
             beforeEach(function() {
-                feed = document.querySelector('.feed');
+                loadFeed(0);
             })
 
             it('should be able to load feed.', function() {
