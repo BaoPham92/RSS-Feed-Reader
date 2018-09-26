@@ -122,26 +122,29 @@ $(function() {
          */
         describe('New Feed Selection', function() {
             let feed = document.querySelector('.feed').children
+
+            let container1 = [], container2 = [];
             
             let localStorage = {
-                store: function (name) {
+                store: function (name, variable) {
                     window.localStorage.setItem(name, Array.from(feed).map(function (index) {
-                        return index.textContent;
+                        variable.push(index.textContent);
                     }));
                 },
 
-                get: function (name) {
-                    console.log(window.localStorage.getItem(name));
+                get: (variable) => { console.log(variable);
                 }
             }
 
             beforeEach(function (done) {
-                loadFeed(0); localStorage.store('feed0'), localStorage.get('feed0'); // First storage of content feed.
+                loadFeed(0); localStorage.store('feed0', container1), localStorage.get(container1); // First storage of content feed.
                 loadFeed(1, done);
             })
 
             it('should be able to change content.', function() {
-                localStorage.store('feed1'), localStorage.get('feed1'); // Second storage of content feed.
+                localStorage.store('feed1', container2), localStorage.get(container2); // Second storage of content feed.
+
+                expect(container1 === container2).not.toBe(true);
             })
          })
 }());
