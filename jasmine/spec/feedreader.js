@@ -133,6 +133,10 @@ $(function() {
                 },
 
                 get: (variable) => { console.log(variable);
+                },
+
+                compare: (toBeCompared) => {
+                    console.log(`Comparing the array values using the (array.values()) method:`, container1.values() === toBeCompared.values());
                 }
             }
 
@@ -142,7 +146,7 @@ $(function() {
             })
 
             it('should be able to change content.', function() {
-                localStorage.store('feed1', container2), localStorage.get(container2); // Second storage of content feed.
+                localStorage.store('feed1', container2), localStorage.get(container2), localStorage.compare(container2); // Second storage of content feed.
 
                 expect(container1 === container2).not.toBe(true);
             })
