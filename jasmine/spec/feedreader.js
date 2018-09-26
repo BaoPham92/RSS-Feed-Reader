@@ -103,7 +103,7 @@ $(function() {
 
          describe('Initial Entries',function() {
 
-            let feed = document.querySelector('.feed');
+            let feed = document.querySelector('.feed').children.length;
 
             beforeEach(function() {
                 feed = document.querySelector('.feed');
