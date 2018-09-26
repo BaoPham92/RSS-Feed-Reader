@@ -103,6 +103,15 @@ $(function() {
 
          describe('Initial Entries',function() {
 
+            let feed = document.querySelector('.feed');
+
+            beforeEach(function() {
+                feed = document.querySelector('.feed');
+            })
+
+            it('should be able to load feed.', function() {
+
+            })
          })
 
     /* TODO: Write a new test suite named "New Feed Selection" */
