@@ -103,14 +103,14 @@ $(function() {
 
          describe('Initial Entries',function() {
 
-            let feed = document.querySelector('.feed').children.length;
-
-            beforeEach(function() {
-                loadFeed(0);
+            beforeEach(function(done) {
+                loadFeed(0, done);
             })
 
             it('should be able to load feed.', function() {
+                let feed = document.querySelector('.feed').children.length;
 
+                expect(feed > 0).toBe(true);
             })
          })
 
