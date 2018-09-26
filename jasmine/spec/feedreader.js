@@ -133,6 +133,11 @@ $(function() {
                 }
             }
 
+            beforeEach(function (done) {
+                loadFeed(0), localStorage.store('feed0'), localStorage.get('feed0');
+                loadFeed(1, done), localStorage.store('feed1'), localStorage.get('feed1');
+            })
+
             it('should be able to change content.', function() {
 
             })
