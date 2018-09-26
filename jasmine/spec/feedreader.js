@@ -120,8 +120,21 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        describe('New Feed Selection', function() {
+            let feed = document.querySelector('.feed').children
+            
+            let localStorage = {
+                store: function (name) {
+                    window.localStorage.setItem(name, feed[0].innerHTML);
+                },
 
-         describe('New Feed Selection',function() {
+                get: function (name) {
+                    console.log(window.localStorage.getItem(name));
+                }
+            }
 
+            it('should be able to change content.', function() {
+
+            })
          })
 }());
