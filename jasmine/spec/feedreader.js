@@ -125,6 +125,7 @@ $(function() {
 
             let container1 = [], container2 = [];
             
+            // Storage for feeds.
             let localStorage = {
                 store: (name, variable) => {
                     window.localStorage.setItem(name, Array.from(feed).map(function (index) {
