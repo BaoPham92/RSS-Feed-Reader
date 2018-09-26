@@ -125,7 +125,9 @@ $(function() {
             
             let localStorage = {
                 store: function (name) {
-                    window.localStorage.setItem(name, feed[0].textContent);
+                    window.localStorage.setItem(name, Array.from(feed).map(function (index) {
+                        return index.textContent;
+                    }));
                 },
 
                 get: function (name) {
