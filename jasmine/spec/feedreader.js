@@ -108,9 +108,10 @@ $(function() {
             })
 
             it('should be able to load feed.', function() {
-                let feed = document.querySelector('.feed').children.length;
+                let feed = document.querySelector('.feed .entry-link').children.length;
+                console.log(feed);
 
-                expect(feed > 0).toBe(true);
+                expect(feed).toBeGreaterThan(0);
             })
          })
 
