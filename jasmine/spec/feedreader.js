@@ -136,12 +136,12 @@ $(function() {
             }
 
             beforeEach(function (done) {
-                loadFeed(0); localStorage.store('feed0'), localStorage.get('feed0');
+                loadFeed(0); localStorage.store('feed0'), localStorage.get('feed0'); // First storage of content feed.
                 loadFeed(1, done);
             })
 
             it('should be able to change content.', function() {
-                localStorage.store('feed1'), localStorage.get('feed1');
+                localStorage.store('feed1'), localStorage.get('feed1'); // Second storage of content feed.
             })
          })
 }());
