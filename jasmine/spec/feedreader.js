@@ -126,7 +126,7 @@ $(function() {
             let container1 = [], container2 = [];
             
             let localStorage = {
-                store: function (name, variable) {
+                store: (name, variable) => {
                     window.localStorage.setItem(name, Array.from(feed).map(function (index) {
                         variable.push(index.textContent);
                     }));
