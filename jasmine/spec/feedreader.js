@@ -120,11 +120,13 @@ $(function() {
         describe('New Feed Selection', function() {
 
             let feed = document.querySelector('.feed').children;
-            console.log(feed);
+            // console.log(feed); // Confirmination message to console.
 
             let container1 = [], container2 = [];
             
             // Storage for feeds.
+
+            // Compare & get methods are for testing purposes only.
             let localStorage = {
                 store: (name, variable) => {
                     window.localStorage.setItem(name, Array.from(feed).map(function (index) {
