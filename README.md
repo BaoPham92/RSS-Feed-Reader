@@ -21,7 +21,10 @@ Testing is an important part of the development process and a standard of develo
 
 I would like to give credit and thanks to the following resources.
 
+#### Communities:
 - [Udacity's](https://discussions.udacity.com/) active community and support.
-- [W3Schools](https://www.w3schools.com/default.asp) for providing explaination on frames.
 - [StackOverflow](https://stackoverflow.com/) and their community for the in depth library of answers and troubleshooting aid.
+
+#### Libraries:
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) Great library for devs.
+- [W3Schools](https://www.w3schools.com/default.asp) Additional to MDN, a great source for devs..
