@@ -115,13 +115,10 @@ $(function() {
             })
          })
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
+         // A suite testing for new/previous feed entries.
         describe('New Feed Selection', function() {
+
             let feed = document.querySelector('.feed').children;
             console.log(feed);
 
@@ -143,6 +140,7 @@ $(function() {
                 }
             }
 
+            // Have a asyn call func for loadFeed, store previous/last feed in container variables.
             beforeEach(function (done) {
 
                 loadFeed(0, function () {
@@ -159,6 +157,7 @@ $(function() {
                 })
             })
 
+            // Spec setting expectations/tests for old/previous feed entries for changes.
             it('should be able to change content.', function() {
 
                 expect(container1 === container2).not.toBe(true);
