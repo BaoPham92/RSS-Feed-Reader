@@ -122,7 +122,8 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         describe('New Feed Selection', function() {
-            let feed = document.querySelector('.feed').children
+            let feed = document.querySelector('.feed').children;
+            console.log(feed);
 
             let container1 = [], container2 = [];
             
@@ -143,12 +144,22 @@ $(function() {
             }
 
             beforeEach(function (done) {
-                loadFeed(0); localStorage.store('feed0', container1), localStorage.get(container1); // First storage of content feed.
-                loadFeed(1, done);
+
+                loadFeed(0, function () {
+
+                    localStorage.store('feed0', container1); // Store feed indexOf(0) from app.js > allFeeds obj.
+                    console.log(container1);
+
+                    loadFeed(1, function() {
+                        localStorage.store('feed1', container2); // Store feed indexOf(1) from app.js > allFeeds obj.
+
+                        done(); // cb
+                    })
+                    
+                })
             })
 
             it('should be able to change content.', function() {
-                localStorage.store('feed1', container2), localStorage.get(container2), localStorage.compare(container2); // Second storage of content feed.
 
                 expect(container1 === container2).not.toBe(true);
             })
