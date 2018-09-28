@@ -61,10 +61,10 @@ $(function() {
 
             // Spec testing if feed has been loaded.
             it('should be able to load feed.', function() {
-                let feed = document.querySelector('.feed .entry-link').children.length;
-                console.log(feed);
+                let feed = document.querySelectorAll('.feed .entry');
+                console.log(`Current loaded data with an amount of items containing (.entry) class.`, feed);
 
-                expect(feed).toBeGreaterThan(0);
+                expect(feed.length).toBeGreaterThan(0);
             })
          })
 
