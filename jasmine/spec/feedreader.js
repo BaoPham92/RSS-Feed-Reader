@@ -34,10 +34,6 @@ $(function() {
 
         let menu = document.querySelector('body');
 
-        beforeEach(function() {
-            menu = document.querySelector('body');
-        })
-
         // Spec testing if (menu) === hidden || not.
         it('should be able to hide menu by default.', function() {
 
