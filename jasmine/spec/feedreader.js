@@ -87,7 +87,7 @@ $(function() {
             let localStorage = {
                 store: (name, variable) => {
                     window.localStorage.setItem(name, Array.from(feed).map(function (index) {
-                        variable.push(index.textContent);
+                        variable.push(index.textContent.trim());
                     }));
                 },
 
@@ -118,6 +118,9 @@ $(function() {
 
             // Spec setting expectations/tests for old/previous feed entries for changes.
             it('should be able to change content.', function() {
+
+                // Comparison for the previous and latest feed comparison in console.
+                localStorage.store('feed1', container2), localStorage.get(container2), localStorage.compare(container2);
 
                 expect(container1 === container2).not.toBe(true);
             })
