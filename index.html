@@ -18,8 +18,8 @@
         <script src="jasmine/lib/jasmine-2.1.2/jasmine-html.js"></script>
         <script src="jasmine/lib/jasmine-2.1.2/boot.js"></script>
     </head>
-    <body class="menu-hidden">
-        <div class="header">
+    <body class="menu-hidden" aria-label="Hidden menu at body tag.">
+        <div class="header" aria-label="Header">
             <a href="#" class="menu-icon-link">
                 <i class="icon-list"></i>
             </a>
@@ -27,11 +27,11 @@
             <h1 class="header-title">Feeds</h1>
         </div>
 
-        <div class="slide-menu">
+        <div class="slide-menu" aria-label="Slide menu when header icon.">
             <ul class="feed-list"></ul>
         </div>
 
-        <div class="feed"></div>
+        <div class="feed" aria-label="Data entries for feed."></div>
 
         <script class="tpl-entry" type="text/x-handlebars-template">
             <a class="entry-link" href="{{link}}">
